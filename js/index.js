@@ -1,6 +1,6 @@
 window.onload = function(){
 
-  $.get('../data/data.json').then(function(data) {
+  $.getJSON('../data/data.json').then(function(data) {
     console.log(data)
     new Chart(document.getElementById('canvas').getContext('2d'), getPaycheckData(data))
   })
