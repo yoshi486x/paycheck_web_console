@@ -1,6 +1,6 @@
 window.onload = function(){
 
-  $.getJSON('../data/data.json').then(function(data) {
+  $.getJSON('https://raw.githubusercontent.com/yoshiki-o0/paycheck_web_console/master/data/data.json').then(function(data) {
     console.log(data)
     new Chart(document.getElementById('canvas').getContext('2d'), getPaycheckData(data))
   })
