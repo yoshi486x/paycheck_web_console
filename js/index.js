@@ -2,16 +2,12 @@ window.onload = function(){
 
   $.get('../data/data.json').then(function(data) {
     console.log(data)
-    // loadData(data)
-    new Chart(document.getElementById('canvas').getContext('2d'), loadData(data))
+    new Chart(document.getElementById('canvas').getContext('2d'), getPaycheckData(data))
   })
-  // this.loadData()
 }
 
-function getPaycheckData() {}
-
 // async function loadData() {
-function loadData(data) {
+function getPaycheckData(data) {
   
   // # Define struct ----------------------------------
   let config = {
